@@ -7,7 +7,7 @@
 
 **cloud_sim_no_ellipse.exe**: Uses spheres for generation — no base shape. Same complex rendering
 
-**cloud_sim_simple.exe**: Only renders
+**cloud_sim_simple.exe**: Renders raw noise generated density shape
 
 
 
