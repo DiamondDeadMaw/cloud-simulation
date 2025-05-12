@@ -1,0 +1,59 @@
+// {
+//     "version": "2.0.0",
+//     "tasks": [
+//         {
+//             "label": "Build GLFW+GLAD App",
+//             "type": "shell",
+//             "command": "g++",
+//             "args": [
+//                 "cloud_sim.cpp",
+//                 "glad.c",
+//                 "-DGLFW_DLL",
+//                 "-I", "include",
+//                 "-L", "lib",
+//                 "-fopenmp",
+//                 "-o", "arrowtest.exe",
+//                 "-lglfw3",
+//                 "-lopengl32",
+//                 "-lgdi32"
+// ],
+
+//             "options": {
+//                 "cwd": "${workspaceFolder}"
+//             },
+//             "problemMatcher": [
+//                 "$gcc"
+//             ],
+//             "group": {
+//                 "kind": "build",
+//                 "isDefault": true
+//             },
+//             "detail": "Build the main application using GLFW and GLAD"
+//         }
+//     ]
+// }
+
+
+
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build CUDA/GPU Raytracer (via build.bat)",
+        "type": "shell",
+        "command": "${workspaceFolder}\\build.bat",
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [
+          "$msCompile",
+          "$nvcc"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "detail": "Executes build.bat which sets up MSVC env and runs nvcc."
+      }
+    ]
+  }
