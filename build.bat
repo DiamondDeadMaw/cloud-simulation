@@ -43,7 +43,6 @@ echo.
 
 :: --- Run NVCC Build ---
 :: %~dp0 expands to the directory containing this batch file
-:: Added --expt-relaxed-constexpr flag to potentially help with GLM constexpr issues
 nvcc --expt-relaxed-constexpr cloud_kernel.cu cloud_simulation.cu cloud_sim.cpp glad.c -DGLFW_DLL -I "%~dp0include" -L "%~dp0lib" -Xcompiler "/openmp" -o "%~dp0cloud_sim_2.exe" -lglfw3dll -lopengl32 -lgdi32 -Xcudafe "--diag_suppress=20014"
 
 :: --- Check Result ---

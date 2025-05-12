@@ -11,5 +11,10 @@
 
 
 
-To compile: Run build.bat. Ensure you have compute capability 12+, nvcc, and visual c runtimes.
+To compile: Run build.bat. Ensure you have compute capability 12+, nvcc, and Visual C++ Build Tools (MSVC C++ compiler, cl.exe).
+
+Will need to edit build to point to the correct cuda installation, and MSVC installation paths for your device.
+
+Not tested on linux, should be simpler.
+
 To run exe's: Need to run in the current directory. Requires CUDA compatible GPU.
